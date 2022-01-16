@@ -1,9 +1,0 @@
- def Sum_singledigit(n):
-
-    if n<=9:
-        return n
-    else:
-        n=int(n % 10) + Sum_singledigit(int(n // 10))
-        return Sum_singledigit(n)
-n=int(input())
-print(Sum_singledigit(n))
