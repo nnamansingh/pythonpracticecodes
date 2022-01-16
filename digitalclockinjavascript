@@ -1,0 +1,37 @@
+ <!doctype html>
+
+<html lang="en">
+<head>
+    <title>Digital Watch</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            height: 30vh;
+            width: 100vw;
+            background-color: red;
+            color: white;
+            padding: 0px 10px;
+        }
+    </style>
+    <script>
+        let a;
+        let time;
+        let date;
+        setInterval(() => {
+            a = new Date();
+            date = a.toLocaleDateString();
+            time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+            document.getElementById("time").innerHTML = time + " on " + date;
+        }, 1000);
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h3>Current time is : </h3>
+        <h1><span id="time"></span></h1>
+    </div>
+</body>
+</html>
